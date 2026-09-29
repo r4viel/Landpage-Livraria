@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Componentes | Biblioteca 1234</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Biblioteca 1234 - Style Guide</h1>
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item"><a href="index.html">Voltar ao Site</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="max-width: 1000px; margin: 3rem auto; padding: 0 1.5rem;">
+        <section class="hero" style="border-radius: 8px; margin-bottom: 3rem; padding: 2rem;">
+            <h2 class="hero__title">Mini Design System</h2>
+            <p class="hero__description">Documentação e demonstração dos componentes reutilizáveis desenvolvidos para a biblioteca.</p>
+        </section>
+
+        <!-- COMPONENTES SIMPLES -->
+        <section style="background: #ffffff; padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid #e2d9f3;">
+            <h2 style="color: #240046; border-bottom: 2px solid #7b2cbf; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">1. Componentes Simples & Variantes</h2>
+
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: #3c096c; margin-bottom: 0.8rem;">1.1 Botões (com Variantes)</h3>
+                <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                    <button class="btn btn--primary">Botão Primário</button>
+                    <button class="btn btn--secondary">Botão Secundário</button>
+                    <button class="btn btn--danger">Botão Perigo</button>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: #3c096c; margin-bottom: 0.8rem;">1.2 Badges / Etiquetas</h3>
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <span class="badge badge--primary">Destaque</span>
+                    <span class="badge badge--success">Disponível</span>
+                    <span class="badge badge--warning">Esgotado</span>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: #3c096c; margin-bottom: 0.8rem;">1.3 Alertas</h3>
+                <div class="alert alert--info">
+                    <strong>Informação:</strong> A biblioteca estará encerrada nos feriados.
+                </div>
+                <div class="alert alert--success">
+                    <strong>Sucesso:</strong> Livro reservado com sucesso!
+                </div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: #3c096c; margin-bottom: 0.8rem;">1.4 Campos de Formulário</h3>
+                <div style="max-width: 400px;">
+                    <input type="text" class="input-text" placeholder="Insira o nome do livro ou autor...">
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPONENTES COMPOSTOS -->
+        <section style="background: #ffffff; padding: 2rem; border-radius: 8px; border: 1px solid #e2d9f3;">
+            <h2 style="color: #240046; border-bottom: 2px solid #7b2cbf; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">2. Componentes Compostos</h2>
+
+            <div style="margin-bottom: 2.5rem;">
+                <h3 style="color: #3c096c; margin-bottom: 0.8rem;">2.1 Card de Livro Composto (Imagem + Badge + Título + Descrição + Botão)</h3>
+                <div style="max-width: 320px;">
+                    <article>
+                        <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Destaque</span>
+                        <img class="destaque__image" src="imagens/senhor-dos-aneis.jpg" alt="Exemplo de capa">
+                        <h3 class="destaque__subtitle">O Senhor dos Anéis</h3>
+                        <p class="destaque__description">Um épico de fantasia com o componente simples de botão e badge reaproveitados.</p>
+                        <a href="#" class="btn btn--primary">Ver Detalhes</a>
+                    </article>
+                </div>
+            </div>
+
+            <div>
+                <h3 style="color: #3c096c; margin-bottom: 0.8rem;">2.2 Formulário Composto (Inputs + Botão)</h3>
+                <div class="newsletter" style="margin: 0;">
+                    <h2 class="newsletter__title">Área de Contacto</h2>
+                    <p class="newsletter__description">Formulário composto reaproveitando inputs e o botão de ação.</p>
+                    <form class="newsletter__form">
+                        <input type="text" class="input-text" placeholder="Nome">
+                        <input type="email" class="input-text" placeholder="E-mail">
+                        <button type="submit" class="btn btn--primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Biblioteca 1234 - Guia de Componentes / Mini Design System</p>
+    </footer>
+</body>
+</html>
