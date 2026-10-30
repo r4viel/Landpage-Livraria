@@ -20,180 +20,236 @@
         </nav>
     </header>
 
-    <main id="Home">
-        <section class="hero">
+   <main>
+        <!-- Apresentação -->
+        <section class="hero" id="Home">
             <h2 class="hero__title">Bem-vindo à Livraria Entre Páginas!</h2>
-            <p class="hero__description">Explore a nossa coleção de livros e encontre a sua próxima leitura.</p>
+            <p class="hero__description">
+                Explore a nossa coleção de livros e encontre a sua próxima leitura.
+            </p>
         </section>
-        <section class="destaques">
-            <h2 class="destaques__title">Destaques</h2>
-            <p class="destaques__description">Confira os nossos livros em destaque:</p>
-            
-        <div style="max-width: 320px;">
-            <article>
-                <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Destaque</span>
-                <img class="destaque__image" src="imagens/senhor-dos-aneis.jpg" alt="Capa de O Senhor dos Anéis">
-                <h3 class="destaque__subtitle">O Senhor dos Anéis</h3>
-                <p class="destaque__description">Um épico de fantasia que acompanha a jornada do Anel Único na Terra-média.</p>
+
+        <!-- Destaques -->
+        <section class="section_cards" id="Destaques">
+            <h2 class="section_cards__title">Destaques</h2>
+            <p class="section_cards__description">
+                Confira os nossos livros em destaque:
+            </p>
+
+            <article class="card">
+                <span class="badge badge--primary">Destaque</span>
+                <img class="card__image" src="imagens/senhor-dos-aneis.jpg" alt="Capa de O Senhor dos Anéis">
+                <h3 class="card__subtitle">O Senhor dos Anéis</h3>
+                <p class="card__description">
+                    Um épico de fantasia que acompanha a jornada do Anel Único na Terra-média.
+                </p>
                 <a href="#" class="btn btn--primary">Ver Detalhes</a>
             </article>
         </div>
 
-        <div style="max-width: 320px;">
-            <article>
-                <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Destaque</span>
-                <img class="destaque__image" src="imagens/1984.jpg" alt="Capa de 1984">
-                <h3 class="destaque__subtitle">1984</h3>
-                <p class="destaque__description">Um clássico distópico sobre vigilância estatal, controle e liberdade individual.</p>
+            <article class="card">
+                <span class="badge badge--primary">Destaque</span>
+                <img class="card__image" src="imagens/1984.jpg" alt="Capa de 1984">
+                <h3 class="card__subtitle">1984</h3>
+                <p class="card__description">
+                    Um clássico distópico sobre vigilância estatal, controle e liberdade individual.
+                </p>
                 <a href="#" class="btn btn--primary">Ver Detalhes</a>
             </article>
         </div>
 
-        <div style="max-width: 320px;">
-            <article>
-                <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Destaque</span>
-                <img class="destaque__image" src="imagens/o-pequeno-principe.jpg" alt="Capa de O Pequeno Príncipe">
-                <h3 class="destaque__subtitle">O Pequeno Príncipe</h3>
-                <p class="destaque__description">Uma poética e marcante história sobre amizade, amor e a essência humana.</p>
+            <article class="card">
+                <span class="badge badge--primary">Destaque</span>
+                <img class="card__image" src="imagens/o-pequeno-principe.jpg" alt="Capa de O Pequeno Príncipe">
+                <h3 class="card__subtitle">O Pequeno Príncipe</h3>
+                <p class="card__description">
+                    Uma poética e marcante história sobre amizade, amor e a essência humana.
+                </p>
+                <a href="#" class="btn btn--primary">Ver Detalhes</a>
+            </article>
+        </section>
+
+        <!-- Terror -->
+        <section class="section_cards" id="Terror">
+            <h2 class="section_cards__title">Terror</h2>
+
+            <article class="card">
+                <span class="badge badge--primary">Terror</span>
+                <img class="card__image" src="imagens/o-iluminado.jpg" alt="Capa de O Iluminado">
+                <h3 class="card__subtitle">O Iluminado</h3>
+                <p class="card__description">
+                    Uma aterrorizante história sobre o isolamento e a loucura no Hotel Overlook.
+                </p>
+                <a href="#" class="btn btn--primary">Ver Detalhes</a>
+            </article>
+
+            <article class="card">
+                <span class="badge badge--primary">Terror</span>
+                <img class="card__image" src="imagens/dracula.jpg" alt="Capa de Drácula">
+                <h3 class="card__subtitle">Drácula</h3>
+                <p class="card__description">
+                    O clássico romance gótico de Bram Stoker que definiu a lenda dos vampiros.
+                </p>
+                <a href="#" class="btn btn--primary">Ver Detalhes</a>
+            </article>
+
+            <article class="card">
+                <span class="badge badge--primary">Terror</span>
+                <img class="card__image" src="imagens/o-exorcista.jpg" alt="Capa de O Exorcista">
+                <h3 class="card__subtitle">O Exorcista</h3>
+                <p class="card__description">
+                    Um sinistro e perturbador mistério envolvendo uma jovem e forças sobrenaturais.
+                </p>
                 <a href="#" class="btn btn--primary">Ver Detalhes</a>
             </article>
         </div>
+        </section>
+
+        <!-- Romance -->
+        <section class="section_cards" id="Romance">
+            <h2 class="section_cards__title">Romance</h2>
+
+            <article class="card">
+                <span class="badge badge--primary">Romance</span>
+                <img class="card__image" src="imagens/orgulho-e-preconceito.jpg" alt="Capa de Orgulho e Preconceito">
+                <h3 class="card__subtitle">Orgulho e Preconceito</h3>
+                <p class="card__description">
+                    A inesquecível e sagaz história de amor de Elizabeth Bennet e Fitzwilliam Darcy.
+                </p>
+                <a href="#" class="btn btn--primary">Ver Detalhes</a>
+            </article>
+
+            <article class="card">
+                <span class="badge badge--primary">Romance</span>
+                <img class="card__image" src="imagens/e-assim-que-termina.jpg" alt="Capa de É Assim que Termina">
+                <h3 class="card__subtitle">É Assim que Termina</h3>
+                <p class="card__description">
+                    Um romance emocionante sobre escolhas difíceis, superação e amor-próprio.
+                </p>
+                <a href="#" class="btn btn--primary">Ver Detalhes</a>
+            </article>
+
+            <article class="card">
+                <span class="badge badge--primary">Romance</span>
+                <img class="card__image" src="imagens/a-culpa-e-das-estrelas.jpg" alt="Capa de A Culpa é das Estrelas">
+                <h3 class="card__subtitle">A Culpa é das Estrelas</h3>
+                <p class="card__description">
+                    Uma emocionante jornada de dois jovens que se apaixonam em momentos delicados.
+                </p>
+                <a href="#" class="btn btn--primary">Ver Detalhes</a>
+            </article>
+        </section>
+
+        <!-- Mistério -->
+        <section class="section_cards" id="Mistério">
+            <h2 class="section_cards__title">Mistério</h2>
+
+            <article class="card">
+                <span class="badge badge--primary">Mistério</span>
+                <img class="card__image" src="imagens/e-nao-sobrou-nenhum.jpg" alt="Capa de E Não Sobrou Nenhum">
+                <h3 class="card__subtitle">E Não Sobrou Nenhum</h3>
+                <p class="card__description">
+                    Dez pessoas são isoladas em uma ilha e começam a ser assassinadas uma a uma.
+                </p>
+                <a href="#" class="btn btn--primary">Ver Detalhes</a>
+            </article>
+
+            <article class="card">
+                <span class="badge badge--primary">Mistério</span>
+                <img class="card__image" src="imagens/o-codigo-da-vinci.jpg" alt="Capa de O Código Da Vinci">
+                <h3 class="card__subtitle">O Código Da Vinci</h3>
+                <p class="card__description">
+                    Um mistério eletrizante unindo arte, história sagrada e símbolos ocultos.
+                </p>
+                <a href="#" class="btn btn--primary">Ver Detalhes</a>
+            </article>
+
+            <article class="card">
+                <span class="badge badge--primary">Mistério</span>
+                <img class="card__image" src="imagens/a-garota-no-trem.jpg" alt="Capa de A Garota no Trem">
+                <h3 class="card__subtitle">A Garota no Trem</h3>
+                <p class="card__description">
+                    Um envolvente suspense psicológico repleto de segredos e reviravoltas.
+                </p>
+                <a href="#" class="btn btn--primary">Ver Detalhes</a>
+            </article>
+        </section>
+
+        <!-- Fantasia -->
+        <section class="section_cards" id="Fantasia">
+            <h2 class="section_cards__title">Fantasia</h2>
+
+            <article class="card">
+                <span class="badge badge--primary">Fantasia</span>
+                <img class="card__image" src="imagens/o-nome-do-vento.jpg" alt="Capa de O Nome do Vento">
+                <h3 class="card__subtitle">O Nome do Vento</h3>
+                <p class="card__description">
+                    A lendária trajetória de Kvothe, um jovem com prodígios e talentos únicos.
+                </p>
+                <a href="#" class="btn btn--primary">Ver Detalhes</a>
+            </article>
+
+            <article class="card">
+                <span class="badge badge--primary">Fantasia</span>
+                <img class="card__image" src="imagens/harry-potter.jpg" alt="Capa de Harry Potter e a Pedra Filosofal">
+                <h3 class="card__subtitle">Harry Potter e a Pedra Filosofal</h3>
+                <p class="card__description">
+                    O início da inesquecível aventura do garoto que descobre o mundo da magia.
+                </p>
+                <a href="#" class="btn btn--primary">Ver Detalhes</a>
+            </article>
+
+            <article class="card">
+                <span class="badge badge--primary">Fantasia</span>
+                <img class="card__image" src="imagens/a-guerra-dos-tronos.jpg" alt="Capa de A Guerra dos Tronos">
+                <h3 class="card__subtitle">A Guerra dos Tronos</h3>
+                <p class="card__description">
+                    A luta pelo Trono de Ferro em um reino cheio de traições, intrigas e dragões.
+                </p>
+                <a href="#" class="btn btn--primary">Ver Detalhes</a>
+            </article>
+        </section>
+
+        <!-- Formulário de contato -->
+        <section class="Formulario" id="Contato">
+            <h2 class="Formulario__title">Inscreva-se no nosso clube de leitura</h2>
+
+            <p class="Formulario__description">
+                Quer receber novidades em primeira mão? Inscreva-se no nosso
+                clube de leitura e receba recomendações exclusivas, convites
+                para eventos e acesso antecipado a lançamentos e descontos
+                especiais. Partilhe a sua paixão por livros connosco!
+            </p>
+
+            <form class="formulario__form">
+                <label for="nome" class="formulario__label">Nome:</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    class="formulario__input__text"
+                    placeholder="Digite seu nome completo"
+                    autocomplete="name"
+                    required
+                >
+
+                <label for="email" class="formulario__label">E-mail:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="formulario__input__text"
+                    placeholder="Digite seu e-mail"
+                    autocomplete="email"
+                    required
+                >
+
+                <button type="submit" class="btn btn--secondary">
+                    Inscrever-se
+                </button>
+            </form>
         </section>
     </main>
-
-    <section class="cardTerror" id="Terror">
-        <h2 class="cardTerror__title">Terror</h2>
-        <div style="max-width: 320px;">
-            <article>
-                <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Terror</span>
-                <img class="destaque__image" src="imagens/o-iluminado.jpg" alt="Capa de O Iluminado">
-                <h3 class="destaque__subtitle">O Iluminado</h3>
-                <p class="destaque__description">Uma aterrorizante história sobre o isolamento e a loucura no Hotel Overlook.</p>
-                <a href="#" class="btn btn--primary">Ver Detalhes</a>
-            </article>
-        </div>
-        <div style="max-width: 320px;">
-            <article>
-                <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Terror</span>
-                <img class="destaque__image" src="imagens/dracula.jpg" alt="Capa de Drácula">
-                <h3 class="destaque__subtitle">Drácula</h3>
-                <p class="destaque__description">O clássico romance gótico de Bram Stoker que definiu a lenda dos vampiros.</p>
-                <a href="#" class="btn btn--primary">Ver Detalhes</a>
-            </article>
-        </div>
-        <div style="max-width: 320px;">
-            <article>
-                <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Terror</span>
-                <img class="destaque__image" src="imagens/o-exorcista.jpg" alt="Capa de O Exorcista">
-                <h3 class="destaque__subtitle">O Exorcista</h3>
-                <p class="destaque__description">Um sinistro e perturbador mistério envolvendo uma jovem e forças sobrenaturais.</p>
-                <a href="#" class="btn btn--primary">Ver Detalhes</a>
-            </article>
-        </div>
-    </section>
-
-    <section class="cardRomance" id="Romance">
-        <h2 class="cardRomance__title">Romance</h2>
-        <div style="max-width: 320px;">
-            <article>
-                <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Romance</span>
-                <img class="destaque__image" src="imagens/orgulho-e-preconceito.jpg" alt="Capa de Orgulho e Preconceito">
-                <h3 class="destaque__subtitle">Orgulho e Preconceito</h3>
-                <p class="destaque__description">A inesquecível e sagaz história de amor de Elizabeth Bennet e Fitzwilliam Darcy.</p>
-                <a href="#" class="btn btn--primary">Ver Detalhes</a>
-            </article>
-        </div>
-        <div style="max-width: 320px;">
-            <article>
-                <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Romance</span>
-                <img class="destaque__image" src="imagens/e-assim-que-termina.jpg" alt="Capa de É Assim que Termina">
-                <h3 class="destaque__subtitle">É Assim que Termina</h3>
-                <p class="destaque__description">Um romance emocionante sobre escolhas difíceis, superação e amor-próprio.</p>
-                <a href="#" class="btn btn--primary">Ver Detalhes</a>
-            </article>
-        </div>
-        <div style="max-width: 320px;">
-            <article>
-                <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Romance</span>
-                <img class="destaque__image" src="imagens/a-culpa-e-das-estrelas.jpg" alt="Capa de A Culpa é das Estrelas">
-                <h3 class="destaque__subtitle">A Culpa é das Estrelas</h3>
-                <p class="destaque__description">Uma emocionante jornada de dois jovens que se apaixonam em momentos delicados.</p>
-                <a href="#" class="btn btn--primary">Ver Detalhes</a>
-            </article>
-        </div>
-    </section>
-
-    <section class="cardMistério" id="Mistério">
-        <h2 class="cardMistério__title">Mistério</h2>
-        <div style="max-width: 320px;">
-            <article>
-                <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Mistério</span>
-                <img class="destaque__image" src="imagens/e-nao-sobrou-nenhum.jpg" alt="Capa de E Não Sobrou Nenhum">
-                <h3 class="destaque__subtitle">E Não Sobrou Nenhum</h3>
-                <p class="destaque__description">Dez pessoas são isoladas em uma ilha e começam a ser assassinadas uma a uma.</p>
-                <a href="#" class="btn btn--primary">Ver Detalhes</a>
-            </article>
-        </div>
-        <div style="max-width: 320px;">
-            <article>
-                <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Mistério</span>
-                <img class="destaque__image" src="imagens/o-codigo-da-vinci.jpg" alt="Capa de O Código Da Vinci">
-                <h3 class="destaque__subtitle">O Código Da Vinci</h3>
-                <p class="destaque__description">Um mistério eletrizante unindo arte, história sagrada e símbolos ocultos.</p>
-                <a href="#" class="btn btn--primary">Ver Detalhes</a>
-            </article>
-        </div>
-        <div style="max-width: 320px;">
-            <article>
-                <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Mistério</span>
-                <img class="destaque__image" src="imagens/a-garota-no-trem.jpg" alt="Capa de A Garota no Trem">
-                <h3 class="destaque__subtitle">A Garota no Trem</h3>
-                <p class="destaque__description">Um envolvente suspense psicológico repleto de segredos e reviravoltas.</p>
-                <a href="#" class="btn btn--primary">Ver Detalhes</a>
-            </article>
-        </div>
-    </section>
-
-    <section class="cardFantasia" id="Fantasia">
-        <h2 class="cardFantasia__title">Fantasia</h2>
-        <div style="max-width: 320px;">
-            <article>
-                <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Fantasia</span>
-                <img class="destaque__image" src="imagens/o-nome-do-vento.jpg" alt="Capa de O Nome do Vento">
-                <h3 class="destaque__subtitle">O Nome do Vento</h3>
-                <p class="destaque__description">A lendária trajetória de Kvothe, um jovem com prodígios e talentos únicos.</p>
-                <a href="#" class="btn btn--primary">Ver Detalhes</a>
-            </article>
-        </div>
-        <div style="max-width: 320px;">
-            <article>
-                <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Fantasia</span>
-                <img class="destaque__image" src="imagens/harry-potter.jpg" alt="Capa de Harry Potter e a Pedra Filosofal">
-                <h3 class="destaque__subtitle">Harry Potter e a Pedra Filosofal</h3>
-                <p class="destaque__description">O início da inesquecível aventura do garoto que descobre o mundo da magia.</p>
-                <a href="#" class="btn btn--primary">Ver Detalhes</a>
-            </article>
-        </div>
-        <div style="max-width: 320px;">
-            <article>
-                <span class="badge badge--primary" style="position: absolute; top: 1rem; right: 1rem;">Fantasia</span>
-                <img class="destaque__image" src="imagens/a-guerra-dos-tronos.jpg" alt="Capa de A Guerra dos Tronos">
-                <h3 class="destaque__subtitle">A Guerra dos Tronos</h3>
-                <p class="destaque__description">A luta pelo Trono de Ferro em um reino cheio de traições, intrigas e dragões.</p>
-                <a href="#" class="btn btn--primary">Ver Detalhes</a>
-            </article>
-        </div>
-    </section>
-
-    <section class="Formulario" id="Contato">
-        <h2 class="Formulario__title">Subscreva ao nosso clube de leitura</h2>
-        <p class="Formulario__description">Quer receber novidades em primeira mão? Inscreva-se no nosso clube de leitura e receba recomendações exclusivas, convites para eventos e acesso antecipado a lançamentos e descontos especiais. Partilhe a sua paixão por livros connosco!</p>
-        <form class="Formulario__form">
-            <input type="text" class="input-text" placeholder="O seu nome completo" required>
-            <input type="email" class="input-text" placeholder="O seu e-mail principal" required>
-            <button type="submit" class="btn btn--primary">Subscrever</button>
-        </form>
-    </section>
 
     <footer>
         <p>&copy; 2026 livraria Entre Páginas. Todos os direitos reservados.</p>

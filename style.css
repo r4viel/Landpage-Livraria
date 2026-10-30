@@ -1,3 +1,37 @@
+:root {
+    --cor-primaria: #7b2cbf;
+    --cor-primaria-escura: #5a189a;
+    --cor-secundaria: #da9dfd;
+    --cor-destaque: #c77dff;
+
+
+    --cor-fundo: #f5f0fa;
+    --cor-superficie: #ffffff;
+    --cor-cabecalho: #1a0933;
+    --cor-hero: #3c096c;
+
+    --cor-texto: #2b213a;
+    --cor-texto-secundario: #4a3e56;
+    --cor-texto-claro: #ffffff;
+    --cor-borda: #e2d9f3;
+
+    --sombra-card: 0 4px 10px rgba(60, 9, 108, 0.08);
+    --sombra-hover: 0 10px 20px rgba(123, 44, 191, 0.2);
+
+    --largura-maxima: 1200px;
+    --largura-formulario: 800px;
+
+    --raio-borda: 8px;
+    --raio-borda-grande: 12px;
+
+    --espacamento-pequeno: 0.5rem;
+    --espacamento-medio: 1rem;
+    --espacamento-grande: 2rem;
+    --espacamento-secao: 3rem;
+
+    --transicao-padrao: 0.3s ease;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,17 +41,19 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #2b213a;
-    background-color: #f5f0fa;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
 }
 
 .header {
-    background-color: #1a0933;
-    color: #ffffff;
+    background-color: var(--cor-cabecalho);
+    color: var(--cor-texto-claro);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -27,43 +63,150 @@ body {
 .header__title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #e0aaff;
+    color: var(--cor-secundaria);
 }
 
 .header__list {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 0.5rem;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .header__item a {
-    color: #ffffff;
+    color: var(--cor-texto-claro);
     text-decoration: none;
     font-weight: 500;
     padding: 0.4rem 0.8rem;
     border-radius: 6px;
     display: inline-block;
-    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: color var(--transicao-padrao), background-color var(--transicao-padrao), transform var(--transicao-padrao), box-shadow var(--transicao-padrao);
 }
 
 .header__item a:hover {
-    color: #e0aaff;
+    color: var(--cor-secundaria);
     background-color: rgba(199, 125, 255, 0.15);
     transform: translateY(-2px);
     box-shadow: 0 0 10px rgba(199, 125, 255, 0.3);
 }
 
+.hero {
+    background: linear-gradient(135deg, var(--cor-cabecalho) 0%, var(--cor-hero) 50%, var(--cor-primaria-escura) 100%);
+    color: var(--cor-texto-claro);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 2.2rem;
+    margin-bottom: var(--espacamento-pequeno);
+    color: var(--cor-secundaria);
+}
+
+.hero__description {
+    font-size: 1.1rem;
+    color: var(--cor-texto-claro);
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.section_cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    max-width: var(--largura-maxima);
+    margin: 0 auto;
+    padding: var(--espacamento-secao) 2rem;
+    scroll-margin-top: 1rem;
+}
+
+.section_cards__title {
+    grid-column: 1 / -1;
+    color: var(--cor-primaria-escura);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: -1rem;
+}
+
+.section_cards__description {
+    grid-column: 1 / -1;
+    color: var(--cor-texto-secundario);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 1.25rem;
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda-grande);
+    box-shadow: var(--sombra-card);
+    transition: transform var(--transicao-padrao), box-shadow var(--transicao-padrao);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+}
+
+.card__image {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background-color: var(--cor-fundo);
+    border-radius: var(--raio-borda);
+    margin-bottom: 1rem;
+}
+
+.card__subtitle {
+    color: var(--cor-primaria-escura);
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+}
+
+.card__description {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+
+.badge {
+    display: inline-block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    padding: 0.3rem 0.75rem;
+    margin-bottom: 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.badge--primary {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria-escura);
+}
+
 .btn {
     display: inline-block;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    font-weight: 600;
     text-decoration: none;
-    text-align: center;
+    align-self: center;
+    padding: 0.75rem 1.25rem;
     border: none;
+    border-radius: var(--raio-borda);
+    font: inherit;
+    font-weight: bold;
+    text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    transition: background-color var(--transicao-padrao), color var(--transicao-padrao), transform var(--transicao-padrao);
 }
 
 .btn:hover {
@@ -71,373 +214,167 @@ body {
 }
 
 .btn--primary {
-    background-color: #7b2cbf;
-    color: #ffffff;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
 }
 
 .btn--primary:hover {
-    background-color: #5a189a;
+    background-color: var(--cor-primaria-escura);
 }
 
 .btn--secondary {
-    background-color: #e0aaff;
-    color: #1a0933;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria-escura);
 }
 
 .btn--secondary:hover {
-    background-color: #c77dff;
-}
-
-.btn--danger {
-    background-color: #a71e1e;
-    color: #ffffff;
-}
-
-.btn--danger:hover {
-    background-color: #780000;
-}
-
-.badge {
-    display: inline-block;
-    padding: 0.25rem 0.6rem;
-    font-size: 0.75rem;
-    font-weight: 700;
-    border-radius: 50px;
-    text-transform: uppercase;
-}
-
-.badge--primary {
-    background-color: #e0aaff;
-    color: #240046;
-}
-
-.badge--success {
-    background-color: #d4edda;
-    color: #155724;
-}
-
-.badge--warning {
-    background-color: #fff3cd;
-    color: #856404;
-}
-
-.alert {
-    padding: 1rem;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-}
-
-.alert--info {
-    background-color: #e2d9f3;
-    color: #240046;
-    border-left: 4px solid #7b2cbf;
-}
-
-.alert--success {
-    background-color: #d4edda;
-    color: #155724;
-    border-left: 4px solid #28a745;
-}
-
-.input-text {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid #e2d9f3;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.input-text:focus {
-    border-color: #7b2cbf;
-    box-shadow: 0 0 0 3px rgba(123, 44, 191, 0.2);
-}
-
-.hero {
-    background: linear-gradient(135deg, #1a0933 0%, #3c096c 50%, #5a189a 100%);
-    color: #ffffff;
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.hero__title {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-    color: #e0aaff;
-}
-
-.hero__description {
-    font-size: 1.1rem;
-    opacity: 0.95;
-    color: #f3effa;
-}
-
-.destaques,
-.cardTerror,
-.cardRomance,
-.cardMistério,
-.cardFantasia {
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.destaques__title, .destaques__description,
-.cardTerror__title,
-.cardRomance__title,
-.cardMistério__title,
-.cardFantasia__title {
-    grid-column: 1 / -1;
-}
-
-.destaques__title,
-.cardTerror__title,
-.cardRomance__title,
-.cardMistério__title,
-.cardFantasia__title {
-    font-size: 1.8rem;
-    color: #240046;
-    border-bottom: 3px solid #7b2cbf;
-    display: inline-block;
-    padding-bottom: 0.3rem;
-}
-
-.destaques__description {
-    color: #5a189a;
-    margin-top: -1rem;
-    margin-bottom: 1rem;
-}
-
-article {
-    background-color: #ffffff;
-    border: 1px solid #e2d9f3;
-    border-radius: 8px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 4px 10px rgba(60, 9, 108, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    position: relative;
-}
-
-article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(123, 44, 191, 0.2);
-}
-
-.destaque__image,
-.cardTerror__image,
-.cardRomance__image,
-.cardMistério__image,
-.cardFantasia__image {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-}
-
-.destaque__image--float {
-    float: left;
-    width: 120px;
-    height: 160px;
-    margin-right: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.destaque__subtitle,
-.cardTerror__subtitle,
-.cardRomance__subtitle,
-.cardMistério__subtitle,
-.cardFantasia__subtitle {
-    font-size: 1.25rem;
-    color: #240046;
-    margin-bottom: 0.5rem;
-}
-
-.destaque__description,
-.cardTerror__description,
-.cardRomance__description,
-.cardMistério__description,
-.cardFantasia__description {
-    font-size: 0.95rem;
-    color: #4a3e56;
-    margin-bottom: 1.5rem;
-    flex-grow: 1;
-}
-
-.destaque__link,
-.cardTerror__link,
-.cardRomance__link,
-.cardMistério__link,
-.cardFantasia__link {
-    align-self: start;
-}
-
-.cardTerror .cardTerror__title {
-    color: #4a0404;
-    border-bottom-color: #a71e1e;
-}
-
-.cardTerror article {
-    background-color: #fff5f5;
-    border-color: #f0d5d5;
-}
-
-.cardTerror article:hover {
-    box-shadow: 0 10px 20px rgba(167, 30, 30, 0.25);
-}
-
-.cardTerror .btn--primary {
-    background-color: #800f2f;
-}
-
-.cardTerror .btn--primary:hover {
-    background-color: #590d22;
-}
-
-.cardRomance .cardRomance__title {
-    color: #581845;
-    border-bottom-color: #b5179e;
-}
-
-.cardRomance article {
-    background-color: #fcf0f8;
-    border-color: #f7d6e0;
-}
-
-.cardRomance article:hover {
-    box-shadow: 0 10px 20px rgba(181, 23, 158, 0.25);
-}
-
-.cardRomance .btn--primary {
-    background-color: #b5179e;
-}
-
-.cardRomance .btn--primary:hover {
-    background-color: #7209b7;
-}
-
-.cardMistério .cardMistério__title {
-    color: #10002b;
-    border-bottom-color: #3a0ca3;
-}
-
-.cardMistério article {
-    background-color: #f2f0f9;
-    border-color: #d8d5f2;
-}
-
-.cardMistério article:hover {
-    box-shadow: 0 10px 20px rgba(58, 12, 163, 0.25);
-}
-
-.cardMistério .btn--primary {
-    background-color: #3a0ca3;
-}
-
-.cardMistério .btn--primary:hover {
-    background-color: #1f0663;
-}
-
-.cardFantasia .cardFantasia__title {
-    color: #3c096c;
-    border-bottom-color: #ff9e00;
-}
-
-.cardFantasia article {
-    background-color: #fffdf0;
-    border-color: #fbe8c0;
-}
-
-.cardFantasia article:hover {
-    box-shadow: 0 10px 20px rgba(255, 158, 0, 0.3);
-}
-
-.cardFantasia .btn--primary {
-    background-color: #7b2cbf;
-}
-
-.cardFantasia .btn--primary:hover {
-    background-color: #5a189a;
+    background-color: var(--cor-destaque);
 }
 
 .Formulario {
-    max-width: 800px;
-    margin: 4rem auto;
-    padding: 2.5rem 2rem;
-    background-color: #ffffff;
-    border: 1px solid #e2d9f3;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(60, 9, 108, 0.08);
-    text-align: center;
+    padding: var(--espacamento-secao) 2rem;
+    background-color: var(--cor-superficie);
+    border-top: 1px solid var(--cor-borda);
+    scroll-margin-top: 1rem;
 }
 
 .Formulario__title {
-    font-size: 1.8rem;
-    color: #240046;
-    margin-bottom: 0.5rem;
+    max-width: var(--largura-formulario);
+    margin: 0 auto 1rem;
+    color: var(--cor-primaria-escura);
+    font-size: 2rem;
+    text-align: center;
 }
 
 .Formulario__description {
-    color: #4a3e56;
-    margin-bottom: 1.5rem;
+    max-width: var(--largura-formulario);
+    margin: 0 auto 2rem;
+    color: var(--cor-texto-secundario);
+    text-align: center;
 }
 
-.Formulario__form {
+.formulario__form {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda-grande);
 }
 
-.Formulario__form .input-text {
-    flex: 1;
-    min-width: 250px;
+.formulario__label {
+    color: var(--cor-texto);
+    font-weight: bold;
+}
+
+.formulario__input__text {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    background-color: var(--cor-superficie);
+    color: var(--cor-texto);
+    font: inherit;
+    transition: border-color var(--transicao-padrao), box-shadow var(--transicao-padrao);
+}
+
+.formulario__form .btn {
+    justify-self: center;
+    align-self: center;
+    width: 40%;
+    margin-top: 0.75rem;
 }
 
 footer {
-    background-color: #1a0933;
-    color: #e0aaff;
+    padding: 1.5rem 2rem;
+    background-color: var(--cor-cabecalho);
+    color: var(--cor-texto-claro);
     text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
     font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 900px) {
+    .section_cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 2.5rem 1.5rem;
+    }
+
+    .card__image {
+        height: 250px;
+    }
+
+    .hero {
+        padding: 4rem 1.5rem;
+    }
+}
+
+
+@media (max-width: 600px) {
     .header {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
+        padding: 1.25rem 1rem;
+    }
+
+    .header__title {
+        font-size: 1.6rem;
     }
 
     .header__list {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
+        gap: 0.25rem 0.75rem;
     }
 
-    .destaques,
-    .cardTerror,
-    .cardRomance,
-    .cardMistério,
-    .cardFantasia {
+    .header__item a {
+        padding: 0.4rem 0.2rem;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 3rem 1.25rem;
+    }
+
+    .hero__description {
+        font-size: 1rem;
+    }
+
+    .section_cards {
         grid-template-columns: 1fr;
+        gap: 1.25rem;
+        padding: 2rem 1rem;
     }
 
-    .Formulario__form {
-        flex-direction: column;
+    .section_cards__title {
+        font-size: 1.7rem;
     }
 
-    .Formulario__form .input-text {
+    .card {
+        padding: 1rem;
+    }
+
+    .card__image {
+        height: 260px;
+    }
+
+    .Formulario {
+        padding: 2rem 1rem;
+    }
+
+    .Formulario__title {
+        font-size: 1.6rem;
+    }
+
+    .formulario__form {
+        padding: 1rem;
+    }
+
+    .formulario__form .btn {
         width: 100%;
+    }
+
+    footer {
+        padding: 1.25rem 1rem;
     }
 }
